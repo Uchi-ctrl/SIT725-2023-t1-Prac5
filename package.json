@@ -5,12 +5,10 @@
   "scripts": {
     "start": "node server.js"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Uchi-ctrl/SIT725-2023-t2-prac3.git"
   },
-
   "keywords": [
     "NodeJs",
     "Express",
@@ -19,15 +17,14 @@
     "JS",
     "CSS"
   ],
-
   "author": "Uche Ajoku",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Uchi-ctrl/SIT725-2023-t2-prac3/issues"
   },
-
   "homepage": "https://github.com/Uchi-ctrl/SIT725-2023-t2-prac3#readme",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "express": "^4.18.2"
+  },
+  "description": ""
 }
