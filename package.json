@@ -1,11 +1,33 @@
 {
   "name": "sit725-2023-t2-prac3",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC"
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Uchi-ctrl/SIT725-2023-t2-prac3.git"
+  },
+
+  "keywords": [
+    "NodeJs",
+    "Express",
+    "Materialize",
+    "HTML",
+    "JS",
+    "CSS"
+  ],
+
+  "author": "Uche Ajoku",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Uchi-ctrl/SIT725-2023-t2-prac3/issues"
+  },
+
+  "homepage": "https://github.com/Uchi-ctrl/SIT725-2023-t2-prac3#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
