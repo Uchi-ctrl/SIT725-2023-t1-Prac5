@@ -13,10 +13,6 @@ const cardList = [
   },
 ];
 
-const clickMe = () => {
-  console.log("clickMe clicked");
-};
-
 const addCards = (items) => {
   console.log(items);
   items.forEach((item) => {
@@ -43,6 +39,10 @@ const addCards = (items) => {
   });
 };
 
+const clickMe = () => {
+  console.log("clickMe clicked");
+};
+
 const submitForm = () => {
   let formData = {};
   formData.first_name = $("#first_name").val();
@@ -53,11 +53,20 @@ const submitForm = () => {
   console.log("Form Data Submitted: ", formData);
 };
 
+const getCats = () => {
+  $.get("/api/cats", (response) => {
+    if (response.statuscode === 200) {
+      addCards(response.data);
+    }
+  });
+};
+
 $(document).ready(function () {
   $(".materialboxed"), materialbox();
-  $(".modal1").modal();
+  $(".modal").modal();
 
-  addCards(cardList);
+  getCats();
+
   $("#formSubmit").click(() => {
     submitForm();
   });
