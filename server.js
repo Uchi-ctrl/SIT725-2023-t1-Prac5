@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 const { MongoClient } = require("mongodb");
 const uri =
-  "mongodb+srv://admin:<password>@cluster0.xgptdlo.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://admin:admin@cluster0.xgptdlo.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 let dbCollection;
 
