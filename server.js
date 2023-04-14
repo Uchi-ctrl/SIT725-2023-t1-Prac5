@@ -41,6 +41,30 @@ function dbConnection(collectionName) {
   });
 }
 
+app.post("/api/cats", (req, res) => {
+  let cat = req.body;
+  console.log(cat);
+  insert(cat, (err, result) => {
+    if (err) {
+      res.json({ statusCode: 400, message: err });
+    } else {
+      res.json({
+        statusCode: 200,
+        data: result,
+        message: "Cat Successfully Added",
+      });
+    }
+  });
+});
+
+function insert(cat, callback) {
+  dbCollection.insertOne(cat, callback);
+}
+
+function getAllCats(callback) {
+  dbCollection.find().toArray(callback);
+}
+
 var port = process.env.port || 3000;
 app.listen(port, () => {
   console.log("App listening to: " + port);
