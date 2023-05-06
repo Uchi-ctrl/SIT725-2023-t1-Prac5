@@ -8,14 +8,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/", router);
 
-function insert(cat, callback) {
-  //dbCollection.insertOne(cat, callback);
-}
-
-function getAllCats(callback) {
-  //dbCollection.find().toArray(callback);
-}
-
 var port = process.env.port || 3000;
 app.listen(port, () => {
   console.log("App listening to: " + port);
