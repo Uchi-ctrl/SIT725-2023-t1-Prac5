@@ -3,7 +3,7 @@ let model = require("../model/model");
 const createCat = (req, res) => {
   let cat = req.body;
   console.log(cat);
-  insert(cat, (err, result) => {
+  model.insertCat(cat, (err, result) => {
     if (err) {
       res.json({ statusCode: 400, message: err });
     } else {
@@ -17,7 +17,7 @@ const createCat = (req, res) => {
 };
 
 const getAllCats = (req, res) => {
-  getAllCats((err, result) => {
+  model.getAllCats((err, result) => {
     if (err) {
       res.json({ statusCode: 400, message: err });
     } else {
