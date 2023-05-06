@@ -54,23 +54,23 @@ const submitForm = () => {
   addCat(formData);
 };
 
+const getCats = () => {
+  $.get("/api/cats", (res) => {
+    if (res.statuscode === 200) {
+      addCards(res.data);
+    }
+  });
+};
+
 const addCat = (cat) => {
   $.ajax({
     url: "api/cats",
     data: cat,
     type: "POST",
     success: (result) => {
-      alert(result, message);
+      alert(result.message);
       location.reload();
     },
-  });
-};
-
-const getCats = () => {
-  $.get("/api/cats", (response) => {
-    if (response.statuscode === 200) {
-      addCards(response.data);
-    }
   });
 };
 
