@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-require("./dbConnection");
+require("../dbConnection");
 let router = require("./route/route");
 
 app.use(express.static(__dirname + "/public"));
