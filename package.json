@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,8 @@
     "mongodb": "^4.4.1",
     "node": "^19.8.1",
     "nodemon": "^2.0.22",
-    "server.js": "^1.0.0"
+    "server.js": "^1.0.0",
+    "mocha": "^10.2.0",
+    "chai": "^4.3.7"
   }
 }
